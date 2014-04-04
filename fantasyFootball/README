@@ -1,0 +1,65 @@
+need to figure out safety's and penalties
+
+
+
+extra points punts and runs are left.
+
+doing extra points and punts first might be a good idea
+this should eliminate 4000 entries in like 10 lines of code and leave you with only runs
+runs only need to take in the runner in "firstTouch" which should be the [1] of any runnning
+play(probbably need to check that)
+tackler should already been taking care of
+don't worry about stray periods at the end of names it happens just try and get
+only names in the firstTouch thing if possilbe
+
+common run looks like this:
+['7:12', 's.mack', 'left', 'guard', 'to', 'jax', '37', 'for', '3', 'yards']
+then theres one for right guard and up the middle
+where they ran is unimportant
+as is where they end up unless its a touchdown
+yardline of start is recorded so all you need is the name and how far they ran
+if they fumble set the fumble flag and make the second touch whoever came up with it
+don't worry about the fact that that won't take into account which team gets the ball
+that's not an issue since we don't care only that they fumbled who forced it
+and the second touch being whoever gets it just so we can see who recovers
+the most fumbles for a season
+whos on d whos on offense is alreadys et
+the self.playString can be helpful to see what the raw play looked like
+tempPlay and by extension play in your eventual isRun or isPunt func, is a list with the
+words split up
+most of the time we try and take out useless info but i've left clock time, the first variable
+of everything in there since i may want it later.
+
+DON'T WORRY ABOUT THE TACKLE, it's taken for inthe function at the bottom for at the page
+just call that if it isn't called already(it should be)
+
+in summary
+
+firstTouch=runner
+secondTouch= fumble recovery
+if double handoff firstTouch=final runner
+fumble=if he fumbles it
+yardsGot=yards gained
+touchdown=is there a touchdown
+
+playstring has your original play
+tempPLay has it in list form
+
+and that should be all you need to find! try and use the "bob" is in "play[6] style of for
+loops it usally helps.
+
+I'd start by splitting the normal left guard right guard and up the middles up and taking
+care of them
+and then going after the basket cases.
+
+
+block punts are considered fumbles and not really taken care of. They are
+pretty much useless for stat anaylsis anyway
+
+self.incomplete also includes missed field goals and conversions
+
+
+
+
+
+
